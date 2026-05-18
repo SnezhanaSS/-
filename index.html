@@ -140,6 +140,232 @@
         }
 
         .
+card li {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .pricing {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--text-main);
+        }
+
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .plan-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px 25px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .plan-card.popular {
+            border: 2px solid var(--primary);
+            position: relative;
+            box-shadow: 0 10px 15px -3px rgba(134, 99, 223, 0.1);
+        }
+
+        .plan-card.popular::before {
+            content: "POPULAR";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .plan-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            text-align: center;
+            color: var(--text-main);
+        }
+
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .plan-features li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .plan-features strong {
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Lection<span>Master</span></div>
+            <p>Универсальный инструмент для работы с учебными материалами. Распознавай, сохраняй и управляй лекциями прямо в Telegram.</p>
+            <div class="buttons-group">
+                <a href="https://t.me/LectionMasterBot" class="btn" target="_blank">Открыть @LectionMasterBot</a>
+                <a href="https://t.me/unistudyfinuni" class="btn btn-secondary" target="_blank">Наш канал UniStudy</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid">
+                <div class="card">
+<h3>📁 Хранилище файлов</h3>
+                    <ul>
+                        <li>Загрузка файлов в облачное хранилище</li>
+                        <li>Быстрый просмотр списка своих файлов</li>
+                        <li>Скачивание документов в любой момент</li>
+                        <li>Удобное удаление ненужных материалов</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Распознавание и OCR</h3>
+                    <ul>
+                        <li>Распознавание текста с фотографий (Yandex Vision OCR)</li>
+                        <li>Транскрибация аудиозаписей в текст (Yandex SpeechKit)</li>
+                        <li>Отслеживание текущего статуса обработки в очереди</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>👤 Личный профиль</h3>
+                    <ul>
+                        <li>Просмотр актуальной информации о себе</li>
+                        <li>Контроль использованного места в хранилище</li>
+                        <li>Проверка оставшихся лимитов на распознавание</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Дополнительно</h3>
+                    <ul>
+                        <li>Мгновенный доступ к информации о боте</li>
+                        <li>Удобное получение помощи через команду /help</li>
+                        <li>Быстрый возврат в главное меню в один клик</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="pricing">
+                <h2>Выбор тарифного плана</h2>
+                <div class="plans">
+                    <div class="plan-card">
+                        <div class="plan-title">Base</div>
+                        <div class="plan-price">199 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>25</strong></li>
+                            <li>Объем хранилища: <strong>50 MB</strong></li>
+                            <li>Фото-распознаваний: <strong>30 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>30 / сутки</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <div class="plan-title">Plus</div>
+                        <div class="plan-price">499 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>150</strong></li>
+                            <li>Объем хранилища: <strong>500 MB</strong></li>
+                            <li>Фото-распознаваний: <strong>30 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>15 / сутки</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-title">Pro</div>
+                        <div class="plan-price">999 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>1000</strong></li>
+                            <li>Объем хранилища: <strong>5 GB</strong></li>
+                            <li>Фото-распознаваний: <strong>150 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>75 / сутки</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: var(--text-muted); font-size: 0.9rem;">
+                    Безопасная оплата подписок и мгновенная проверка статуса платежа через <strong>ЮKassa</strong>
 </p>
             </section>
         </main>
