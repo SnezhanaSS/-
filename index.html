@@ -59,6 +59,14 @@
             margin: 0 auto 30px;
         }
 
+        .buttons-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
         .btn {
             display: inline-block;
             background-color: var(--accent);
@@ -74,6 +82,18 @@
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(250, 204, 21, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
         }
 
         .grid {
@@ -138,7 +158,7 @@
         .plans {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+justify-content: center;
             gap: 25px;
         }
 
@@ -228,12 +248,14 @@
         <header>
             <div class="logo">Lection<span>Master</span></div>
             <p>Универсальный инструмент для работы с учебными материалами. Распознавай, сохраняй и управляй лекциями прямо в Telegram.</p>
-            <a href="https://t.me/LectionMasterBot" class="btn" target="_blank">Открыть @LectionMasterBot</a>
+            <div class="buttons-group">
+                <a href="https://t.me/LectionMasterBot" class="btn" target="_blank">Открыть @LectionMasterBot</a>
+                <a href="https://t.me/unistudyfinuni" class="btn btn-secondary" target="_blank">Наш канал UniStudy</a>
+            </div>
         </header>
 
         <main>
             <div class="grid">
-                <!-- Файлы -->
                 <div class="card">
                     <h3>📁 Хранилище файлов</h3>
                     <ul>
@@ -244,7 +266,6 @@
                     </ul>
                 </div>
 
-                <!-- Распознавание -->
                 <div class="card">
                     <h3>⚡ Распознавание и OCR</h3>
                     <ul>
@@ -254,7 +275,6 @@
                     </ul>
                 </div>
 
-                <!-- Профиль -->
                 <div class="card">
                     <h3>👤 Личный профиль</h3>
                     <ul>
@@ -264,22 +284,19 @@
                     </ul>
                 </div>
 
-                <!-- Общее -->
                 <div class="card">
                     <h3>⚙️ Дополнительно</h3>
                     <ul>
                         <li>Мгновенный доступ к информации о боте</li>
-                        <li>Удобное получение помощи через команду /help</li>
+<li>Удобное получение помощи через команду /help</li>
                         <li>Быстрый возврат в главное меню в один клик</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Подписка и оплата -->
             <section class="pricing">
                 <h2>Выбор тарифного плана</h2>
                 <div class="plans">
-                    <!-- Base -->
                     <div class="plan-card">
                         <div class="plan-title">Base</div>
                         <div class="plan-price">199 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
@@ -291,7 +308,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Plus -->
                     <div class="plan-card popular">
                         <div class="plan-title">Plus</div>
                         <div class="plan-price">499 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
@@ -303,7 +319,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Pro -->
                     <div class="plan-card">
                         <div class="plan-title">Pro</div>
                         <div class="plan-price">999 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
@@ -323,7 +338,7 @@
 
         <footer>
             <p>© 2026 LectionMaster. Все права защищены.</p>
-            <p>Официальный бот: <a href="https://t.me/LectionMasterBot" target="_blank">@LectionMasterBot</a></p>
+            <p>Наш канал: <a href="https://t.me/unistudyfinuni" target="_blank">@unistudyfinuni</a> | Бот: <a href="https://t.me/LectionMasterBot" target="_blank">@LectionMasterBot</a></p>
         </footer>
     </div>
 
