@@ -6,17 +6,15 @@
     <title>LectionMasterBot — Твой умный помощник в учебе</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --primary: #8663df;
-            --accent: #ffff4d;
-            --accent-dark: #e6e639;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
+            --bg-color: #0d081b;
+            --card-bg: #1a1235;
+            --primary: #8b5cf6;
+            --accent: #facc15;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
         }
 
         * {
@@ -51,10 +49,7 @@
         }
 
         .logo span {
-            color: var(--primary);
-            background: linear-gradient(135deg, var(--primary), #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent);
         }
 
         header p {
@@ -75,33 +70,30 @@
         .btn {
             display: inline-block;
             background-color: var(--accent);
-            color: #0f172a;
+            color: #000000;
             padding: 15px 35px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 15px rgba(255, 255, 77, 0.4);
-            border: 1px solid var(--accent-dark);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(250, 204, 21, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            background-color: var(--accent-dark);
-            box-shadow: 0 6px 20px rgba(230, 230, 57, 0.6);
+            box-shadow: 0 6px 25px rgba(250, 204, 21, 0.5);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: var(--primary);
+            color: var(--text-main);
             border: 2px solid var(--primary);
-            box-shadow: 0 4px 15px rgba(134, 99, 223, 0.1);
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
         }
 
         .btn-secondary:hover {
             background-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 6px 20px rgba(134, 99, 223, 0.3);
+            box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
         }
 
         .grid {
@@ -113,22 +105,19 @@
 
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             border-radius: 16px;
             padding: 30px;
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: border-color 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-4px);
             border-color: var(--primary);
-            box-shadow: 0 10px 15px -3px rgba(134, 99, 223, 0.1), 0 4px 6px -2px rgba(134, 99, 223, 0.05);
         }
 
         .card h3 {
             font-size: 1.4rem;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -139,8 +128,7 @@
             list-style: none;
         }
 
-        .
-card li {
+        .card li {
             color: var(--text-muted);
             margin-bottom: 10px;
             position: relative;
@@ -165,38 +153,29 @@ card li {
         .pricing h2 {
             font-size: 2rem;
             margin-bottom: 40px;
-            color: var(--text-main);
         }
 
         .plans {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+justify-content: center;
             gap: 25px;
         }
 
         .plan-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background: linear-gradient(145deg, #1a1235, #24194a);
+            border: 2px solid rgba(139, 92, 246, 0.3);
             border-radius: 20px;
-            padding: 40px 25px;
+            padding: 40px 20px;
             width: 300px;
             text-align: left;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
         }
 
         .plan-card.popular {
-            border: 2px solid var(--primary);
+            border-color: var(--accent);
             position: relative;
-            box-shadow: 0 10px 15px -3px rgba(134, 99, 223, 0.1);
         }
 
         .plan-card.popular::before {
@@ -205,13 +184,12 @@ card li {
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: var(--primary);
-            color: #ffffff;
+            background-color: var(--accent);
+            color: #000000;
             font-size: 0.75rem;
             font-weight: bold;
             padding: 4px 12px;
             border-radius: 10px;
-            letter-spacing: 0.5px;
         }
 
         .plan-title {
@@ -219,13 +197,12 @@ card li {
             font-weight: 800;
             margin-bottom: 5px;
             text-align: center;
-            color: var(--text-main);
         }
 
         .plan-price {
             font-size: 2.2rem;
             font-weight: 800;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 20px;
             text-align: center;
         }
@@ -237,7 +214,7 @@ card li {
         }
 
         .plan-features li {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             margin-bottom: 12px;
             padding-left: 25px;
@@ -246,14 +223,10 @@ card li {
 
         .plan-features li::before {
             content: "✓";
-            color: var(--primary);
+            color: var(--accent);
             position: absolute;
             left: 0;
             font-weight: bold;
-        }
-
-        .plan-features strong {
-            color: var(--text-main);
         }
 
         footer {
@@ -261,18 +234,11 @@ card li {
             padding: 60px 20px 20px;
             color: var(--text-muted);
             font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 60px;
         }
 
         footer a {
-            color: var(--primary);
+            color: var(--accent);
             text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -291,7 +257,7 @@ card li {
         <main>
             <div class="grid">
                 <div class="card">
-<h3>📁 Хранилище файлов</h3>
+                    <h3>📁 Хранилище файлов</h3>
                     <ul>
                         <li>Загрузка файлов в облачное хранилище</li>
                         <li>Быстрый просмотр списка своих файлов</li>
@@ -322,7 +288,7 @@ card li {
                     <h3>⚙️ Дополнительно</h3>
                     <ul>
                         <li>Мгновенный доступ к информации о боте</li>
-                        <li>Удобное получение помощи через команду /help</li>
+<li>Удобное получение помощи через команду /help</li>
                         <li>Быстрый возврат в главное меню в один клик</li>
                     </ul>
                 </div>
@@ -366,7 +332,7 @@ card li {
                 </div>
                 <p style="margin-top: 30px; color: var(--text-muted); font-size: 0.9rem;">
                     Безопасная оплата подписок и мгновенная проверка статуса платежа через <strong>ЮKassa</strong>
-</p>
+                </p>
             </section>
         </main>
 
