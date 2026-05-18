@@ -216,4 +216,131 @@ justify-content: center;
         .plan-features li {
             font-size: 0.9rem;
             color: var(--text-muted);
-            marg
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Lection<span>Master</span></div>
+            <p>Универсальный инструмент для работы с учебными материалами. Распознавай, сохраняй и управляй лекциями прямо в Telegram.</p>
+            <div class="buttons-group">
+                <a href="https://t.me/LectionMasterBot" class="btn" target="_blank">Открыть @LectionMasterBot</a>
+                <a href="https://t.me/unistudyfinuni" class="btn btn-secondary" target="_blank">Наш канал UniStudy</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid">
+                <div class="card">
+                    <h3>📁 Хранилище файлов</h3>
+                    <ul>
+                        <li>Загрузка файлов в облачное хранилище</li>
+                        <li>Быстрый просмотр списка своих файлов</li>
+                        <li>Скачивание документов в любой момент</li>
+                        <li>Удобное удаление ненужных материалов</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Распознавание и OCR</h3>
+                    <ul>
+                        <li>Распознавание текста с фотографий (Yandex Vision OCR)</li>
+                        <li>Транскрибация аудиозаписей в текст (Yandex SpeechKit)</li>
+                        <li>Отслеживание текущего статуса обработки в очереди</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>👤 Личный профиль</h3>
+                    <ul>
+                        <li>Просмотр актуальной информации о себе</li>
+                        <li>Контроль использованного места в хранилище</li>
+                        <li>Проверка оставшихся лимитов на распознавание</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Дополнительно</h3>
+                    <ul>
+                        <li>Мгновенный доступ к информации о боте</li>
+<li>Удобное получение помощи через команду /help</li>
+                        <li>Быстрый возврат в главное меню в один клик</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="pricing">
+                <h2>Выбор тарифного плана</h2>
+                <div class="plans">
+                    <div class="plan-card">
+                        <div class="plan-title">Base</div>
+                        <div class="plan-price">199 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>25</strong></li>
+                            <li>Объем хранилища: <strong>50 MB</strong></li>
+                            <li>Фото-распознаваний: <strong>15 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>30 / сутки</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <div class="plan-title">Plus</div>
+                        <div class="plan-price">499 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>150</strong></li>
+                            <li>Объем хранилища: <strong>500 MB</strong></li>
+                            <li>Фото-распознаваний: <strong>39 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>15 / сутки</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-title">Pro</div>
+                        <div class="plan-price">999 ₽ <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 30 дней</span></div>
+                        <ul class="plan-features">
+                            <li>Файлов в хранилище: <strong>1000</strong></li>
+                            <li>Объем хранилища: <strong>5 GB</strong></li>
+                            <li>Фото-распознаваний: <strong>78 / сутки</strong></li>
+                            <li>Аудио-распознаваний: <strong>75 / сутки</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: var(--text-muted); font-size: 0.9rem;">
+                    Безопасная оплата подписок и мгновенная проверка статуса платежа через <strong>ЮKassa</strong>
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 LectionMaster. Все права защищены.</p>
+            <p>Наш канал: <a href="https://t.me/unistudyfinuni" target="_blank">@unistudyfinuni</a> | Бот: <a href="https://t.me/LectionMasterBot" target="_blank">@LectionMasterBot</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
